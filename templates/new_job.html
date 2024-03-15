@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Job</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+<form method="post">
+    {% csrf_token %}
+    <h1>Vacancy details</h1>
+    <h3>Title:</h3><input name="title"  placeholder="Enter title of vacancy">
+    <h3>Location:</h3><input name="location" placeholder="Enter your location of vacancy">
+    <h3>Minimum experience:</h3><input name="min_exp" placeholder="Enter minimum experience requirements for this job">
+    <h3>Maximum experience:</h3><input name="max_exp" placeholder="Enter your maximum experience requirements for this job">
+    <h3>Description:</h3><input name="description" placeholder="Enter job description">
+    <h3>Tags:</h3><input name="tags" placeholder="Enter tags related to job">
+    <h3>Work type. Choose one below</h3>
+        <input type="radio" id="e" name="type_work" value="f">
+        <label for="e">Full-time</label><br>
+        <input type="radio" id="c" name="type_work" value="p">
+        <label for="c">Part-time</label><br>
+    <h3>Choose work site. Choose one below</h3>
+        <input type="radio" id="w" name="type_remote" value="r">
+        <label for="e">Full-time</label><br>
+        <input type="radio" id="x" name="type_remote" value="o">
+        <label for="x">On-site</label><br>
+        <input type="radio" id="y" name="type_remote" value="h">
+        <label for="y">Part-time</label><br>
+    <button class="btn btn-secondary" type="submit" id="submit">Submit</button>
+
+</form>
+</div>
+</body>
+</html>
